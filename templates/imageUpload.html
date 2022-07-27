@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <script src="{{ url_for('static', filename='js/style.js') }}"></script>
+    </head>
+    <body>
+        <form action = "{{url_for('display')}}" method = "post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*">
+            <p>Drag your image here or click in this area.</p>
+            <button type="submit">Upload</button>
+          </form>
+    </body>
+</html>
